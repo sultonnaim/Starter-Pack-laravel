@@ -1,6 +1,3 @@
-@extends('layouts.app')
-
-@section('content')
 <div class="card">
     <div class="card-header">
         <h3 class="card-title">
@@ -56,24 +53,3 @@
 
     <!-- /.card-body -->
 </div>
-@endsection
-
-@section('script_addon')
-<link rel="stylesheet" href="{{ asset('assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
-<script src="{{ asset('assets/plugins/datatables/jquery.dataTables.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('#dataTable').DataTable({
-            aaSorting: [
-                [0, 'desc']
-            ],
-            columnDefs: [{
-                    targets: -1,
-                    orderable: false
-                } // Menonaktifkan urutan untuk kolom terakhir
-            ]
-        });
-    });
-</script>
-@endsection
